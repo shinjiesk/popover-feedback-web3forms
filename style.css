@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="radio"]:checked + label {
+  @apply ring-1 ring-indigo-400  border-indigo-400;
+}
+
+.is-invalid,
+.was-validated :invalid,
+.was-validated :invalid ~ label {
+  @apply border-red-500 !important;
+}
+
+.is-invalid,
+.was-validated :invalid:focus {
+  --tw-ring-color: rgba(220, 53, 69, 0.2);
+}
